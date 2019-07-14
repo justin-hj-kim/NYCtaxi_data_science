@@ -18,6 +18,7 @@ The models folder contains several jupyter notebooks:
 1. Clustering notebook, which uses KMeans Clustering (with 15 clusters) to group the trips by their pickup location coordinates. These coordinate labels will later be used in other models as predictor variables. 
 2. The ride duration prediction notebook, which uses both simple linear regression and XGBoost models. The scoring metric here will be judged by the Root Mean Log Squared Error, meaning that the predictions will be made on the log(trip_duration), and the scale will be in log-seconds.
 3. Time Series Analysis notebook, which uses ARIMA and Seasonal ARIMA models to forecast taxi ride demand in NYC. 
+4. Neural Network notebook, which contains both simple sequential neural networks and Long Short Term Memory (LSTM) network to forecast taxi ride demand in NYC.
 
 # Findings
 

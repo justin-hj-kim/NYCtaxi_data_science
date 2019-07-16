@@ -22,5 +22,27 @@ The models folder contains several jupyter notebooks:
 
 # Findings
 
+**Predicting Taxi Trip Duration (in log-seconds)**
+
+| Model | Root Mean Log Squared Error | Hyperparameters |
+| :---         |     :---:      |          ---: |
+| Linear Regression  | 0.518     | n/a    |
+| XGBoost : reg-linear     | 0.384       | xgb_pars (in documentation)     |
+
+- The most important features in determining taxi trip durations are: distance, direction, day of week (Sunday) and pickup cluster (14 -midtown area).
+
+**Taxi Ride Demand - Time Series Forecasting (in # of rides)**
+
+| Model | Forecasting RMSE | Hyperparameters |
+| :---         |     :---:      |          ---: |
+| SARIMAX   |  490    | p,d,q,s = (1,0,1,7), weekly detrended    |
+| Basic Neural Network     | 448       | 2 layers, 50 neurons, ReLu activation, 20 epochs    |
+| LSTM    | 527       |  50 neurons, 40 epochs, batch size = 1  |
+
+- The basic neural network had an out of sample forecasting root mean squared error of 448 over the course of 15 days. The basic neural network also properly modelled the weekly seasonal trend of the time series. This was all done without detrending the original dataset before feeding it in as an input. The LSTM seems to need more data observations to be an effective forecasting tool. It may also just be that the number of taxi trips taken in a day aren't very dependent on the values of taxi rides of previous days (making the use of LSTM unnecessary).
+
+
+
 # Future Work
-Other notable data can be wrangled to add more meaning or increase accuracy to the ride duration prediction models. An example might be finding data on if there were major events held in the city at some time (i.e at MSG or some other venue). This may very well cause traffic delays and jams. 
+Other notable data can be wrangled to add more meaning or increase accuracy to the ride duration prediction models. An example might be finding data on if there were major events held in the city at some time (i.e at MSG or some other venue). This may very well cause traffic delays and jams. We could also collect more historical data about the number of taxi rides in previous years, so that our time series models can be detrended on an annual level (it may help with weather related seasonality changes as well). 
+

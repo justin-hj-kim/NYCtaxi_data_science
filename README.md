@@ -9,6 +9,12 @@ The New York City yellow taxi cabs are one of the most distinguishing symbols of
 # Motivation
 In a city that is always cluttered with millions of pedestrians, cars, public transit, and others, it would be beneficial to understand just how long you can expect your trip from point A to point B to take. Given various data about geolocation, trip duration, and the weather, it would be beneficial for both the taxi driver and the passengers to know when and where the taxi demand would be high, and also to know how long a trip can be expected to take. 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/49466466/61260433-2ac73f00-a7b9-11e9-88ed-e61a9c3bcd22.JPG" >
+</p>
+
+
+
 # Overview
 
 The initial data cleaning/wrangling work can be found in the notebooks folder. The initial findings from the data analysis can also be found in the notebooks folder. 

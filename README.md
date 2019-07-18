@@ -17,6 +17,11 @@ In a city that is always cluttered with millions of pedestrians, cars, public tr
 
 # Overview
 
+Due to the size of the csv files containing our data, it will not be uploaded into this repository. The pertinent data can be found at the following links:
+
+1. https://www.kaggle.com/c/nyc-taxi-trip-duration
+2. https://www.kaggle.com/mathijs/weather-data-in-new-york-city-2016
+
 The initial data cleaning/wrangling work can be found in the notebooks folder. The initial findings from the data analysis can also be found in the notebooks folder. 
 
 The models folder contains several jupyter notebooks: 

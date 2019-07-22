@@ -17,6 +17,8 @@ In a city that is always cluttered with millions of pedestrians, cars, public tr
 
 # Overview
 
+## The Data
+
 Due to the size of the csv files containing our data, it will not be uploaded into this repository. The pertinent data can be found at the following links:
 
 1. https://www.kaggle.com/c/nyc-taxi-trip-duration
@@ -26,12 +28,19 @@ The initial data cleaning/wrangling work can be found in the notebooks folder. T
 
 The models folder contains several jupyter notebooks: 
 
-1. Clustering notebook, which uses KMeans Clustering (with 15 clusters) to group the trips by their pickup location coordinates. These coordinate labels will later be used in other models as predictor variables. 
-2. The ride duration prediction notebook, which uses both simple linear regression and XGBoost models. The scoring metric here will be judged by the Root Mean Log Squared Error, meaning that the predictions will be made on the log(trip_duration), and the scale will be in log-seconds.
-3. Time Series Analysis notebook, which uses ARIMA and Seasonal ARIMA models to forecast taxi ride demand in NYC. 
-4. Neural Network notebook, which contains both simple sequential neural networks and Long Short Term Memory (LSTM) network to forecast taxi ride demand in NYC.
+1. [Clustering notebook](https://github.com/justin-hj-kim/NYCtaxi_data_science/blob/master/notebooks/Clustering.ipynb), which uses KMeans Clustering (with 15 clusters) to group the trips by their pickup location coordinates. These coordinate labels will later be used in other models as predictor variables. 
+2. [The ride duration prediction notebook](https://github.com/justin-hj-kim/NYCtaxi_data_science/blob/master/models/Predict_Ride_Duration.ipynb), which uses both simple linear regression and XGBoost models. The scoring metric here will be judged by the Root Mean Log Squared Error, meaning that the predictions will be made on the log(trip_duration), and the scale will be in log-seconds.
+3. [Time Series Analysis notebook](https://github.com/justin-hj-kim/NYCtaxi_data_science/blob/master/models/deseasonalized_time_series.ipynb), which uses ARIMA and Seasonal ARIMA models to forecast taxi ride demand in NYC. 
+4. [Neural Network notebook](https://github.com/justin-hj-kim/NYCtaxi_data_science/blob/master/models/Nueral_Network_time_series.ipynb), which contains both simple 2 layer neural network and Long Short Term Memory (LSTM) network to forecast taxi ride demand in NYC.
+5. [Folium Maps notebook](https://github.com/justin-hj-kim/NYCtaxi_data_science/blob/master/notebooks/folium_trials.ipynb), which contains a brief look at a heatmap over time created with the Folium package. 
 
 # Findings
+
+**General Tips**
+
+- There were two vendor id's associated with two different taxi service providers. Taxi vendor 1 always always slower than the vendor 0. If you are in a hurry, and you find a way to de-anonymize this id, avoid these providers (we weren't concerned with fares, but you'd definitely end up paying more for vendor 1). 
+- There are consistently the fewest number of Taxi rides at 5AM in the morning. Avoid staying out too late partying, because you may not be able to get any rides, and have to walk those 30 blocks. 
+- Most taxi rides were serviced within a single cluster. That is, the pickup and dropoff clusters were the same; it shows us that alot of New York taxi patrons are either lost (and just hopped in a cab to go somewhere that was actually walk-able) or just lazy, and didnt want to walk the 10 or 20 blocks. 
 
 **Predicting Taxi Trip Duration (in log-seconds)**
 

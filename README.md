@@ -38,9 +38,9 @@ The models folder contains several jupyter notebooks:
 
 **General Tips**
 
-- There were two vendor id's associated with two different taxi service providers. Taxi vendor 1 always always slower than the vendor 0. If you are in a hurry, and you find a way to de-anonymize this id, avoid these providers (we weren't concerned with fares, but you'd definitely end up paying more for vendor 1). 
+- There were two vendor id's associated with two different taxi service providers. Taxi vendor 1 is (statistically) significantly slower than the vendor 0. If you are in a hurry, and you find a way to de-anonymize this id, avoid these providers (we also were not concerned with fares, but you'd definitely end up paying more for vendor 1!). 
 - There are consistently the fewest number of Taxi rides at 5AM in the morning. Avoid staying out too late partying, because you may not be able to get any rides, and have to walk those 30 blocks. 
-- Most taxi rides were serviced within a single cluster. That is, the pickup and dropoff clusters were the same; it shows us that alot of New York taxi patrons are either lost (and just hopped in a cab to go somewhere that was actually walk-able) or just lazy, and didnt want to walk the 10 or 20 blocks. 
+- Most taxi rides were serviced within a single cluster. That is, the pickup and dropoff clusters were the same; it shows us that alot of New York taxi patrons are either lost tourists (who just hopped in a cab to go somewhere that was actually walk-able) or just lazy, and didnt want to walk the 10 or 20 blocks. 
 
 **Predicting Taxi Trip Duration (in log-seconds)**
 
